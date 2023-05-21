@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+	<include file="/home/albin/DRONE/AGV_UGV_WS/src/agv_ugv/ugv/src/launch/gazebo_explorer_bot.launch"/>
+	<include file="/home/albin/DRONE/AGV_UGV_WS/src/agv_ugv/agv/launch/main.launch"/>
+
+</launch>
