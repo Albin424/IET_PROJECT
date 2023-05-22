@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(iet)
+project(agv_ugv)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
@@ -10,14 +10,6 @@ project(iet)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
-  message_generation
-  gazebo_msgs
-  std_srvs
-  geometry_msgs
-  sensor_msgs
-  nav_msgs
-  std_msgs
-  gazebo_ros
 )
 
 ## System dependencies are found with CMake's conventions
@@ -111,8 +103,8 @@ find_package(catkin REQUIRED COMPONENTS
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES iet
-#  CATKIN_DEPENDS rocpp rospy
+#  LIBRARIES agv_ugv
+#  CATKIN_DEPENDS roscpp rospy
 #  DEPENDS system_lib
 )
 
@@ -129,7 +121,7 @@ include_directories(
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/iet.cpp
+#   src/${PROJECT_NAME}/agv_ugv.cpp
 # )
 
 ## Add cmake target dependencies of the library
@@ -140,7 +132,7 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-# add_executable(${PROJECT_NAME}_node src/iet_node.cpp)
+# add_executable(${PROJECT_NAME}_node src/agv_ugv_node.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -204,7 +196,7 @@ include_directories(
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_iet.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_agv_ugv.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()

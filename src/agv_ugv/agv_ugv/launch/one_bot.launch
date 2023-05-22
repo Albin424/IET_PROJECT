@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<launch>
+
+    <arg name="robot_name">
+    <arg name="init_pose">
+    
+    
+    <param name="robot_description" textfile="$(find ugv)/src/urdf/leo.urdf" />
+
+    <!-- include file="$(find gazebo_ros)/launch/empty_world.launch"> 
+    	< arg name="world_name" value="$(find ugv)/src/worlds/my_empty.world"/>
+
+    </include -->
+    
+    <!-- gazebo -->
+
+    <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"  args="$(arg init_pose) -param robot_description -urdf -model ugv" respwan="false" output="screen" />
+
+    <node name="Rsp" pkg="robot_state_publisher" type="robot_state_publisher" output="screen"/>
+
+ <!-- rviz -->
+    <node name="Joint_tester" pkg="rviz" type="rviz" output="screen" args="-d $(find ugv)/src/config/map.rviz"/>
+
+
+
+
+</launch>
+
+
+
+

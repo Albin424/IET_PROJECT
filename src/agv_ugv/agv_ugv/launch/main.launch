@@ -1,0 +1,15 @@
+<launch>
+
+   <param name="/use_sim_time" value="true"/>
+   
+   <!-- Start World -->
+   
+   <!-- node name="gazebo" pkg="gazebo_ros" type="gazebo" args="$(find XXX)/path to an world in gazebo_ros" respwan="false" output="screen" -->
+   
+   <include file="$(find gazebo_ros)/launch/empty_world.launch"> 
+    	<arg name="world_name" value="$(find ugv)/src/worlds/my_empty.world" />
+
+   </include>
+   <include file="$(find agv_ugv)/launch/robot.launch" /> 
+
+</launch>

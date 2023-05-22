@@ -1,0 +1,37 @@
+<launch>
+
+ <param name="robot_descripition" command="$(find ugv)/src/urdf/leo.urdf" />
+
+
+
+
+
+	<group ns="robot1">
+	  <param name="tf_prefix" value="robot1_tf"/>
+	  <include file="$(fing agv_ugv)/launch/one_robot.launch" >
+	    <arg name="init_pose" value="-x 3 -y 1 -z 0" />
+	    <arg name="robot_name" value="Robot1" />
+	  </include>
+	</group>
+
+
+
+	<group ns="robot2">
+	  <param name="tf_prefix" value="robot2_tf"/>
+	  <include file="$(fing agv_ugv)/launch/one_robot.launch" >
+	    <arg name="init_pose" value="-x 4 -y 1 -z 0" />
+	    <arg name="robot_name" value="Robot2" />
+	  </include>
+	</group>
+
+
+
+	<group ns="robot3">
+	  <param name="tf_prefix" value="robot3_tf"/>
+	  <include file="$(fing agv_ugv)/launch/one_robot.launch" >
+	    <arg name="init_pose" value="-x 5 -y 1 -z 0" />
+	    <arg name="robot_name" value="Robot3" />
+	  </include>
+	</group>
+
+</launch>

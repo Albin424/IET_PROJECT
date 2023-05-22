@@ -1,0 +1,7 @@
+
+<launch> 
+    <!-- <include ns="ugv" file="$(find ugv)/src/launch/gazebo_explorer_bot.launch" /> -->
+    <!-- <include ns="agv" file="$(find agv)/launch/main.launch" /> -->
+    <include file="$(find agv)/launch/main.launch"/>
+    <include file="$(find ugv)/src/launch/gazebo_explorer_bot.launch"/>
+</launch>

@@ -2,6 +2,7 @@
 	
 	<!-- Include the MAVROS node with SITL and Gazebo -->
 	<include file="$(find px4)/launch/mavros_posix_sitl.launch">
+		<arg name="world" value="$(find agv)/worlds/my_empty.world"/>
 	
 	</include>
 

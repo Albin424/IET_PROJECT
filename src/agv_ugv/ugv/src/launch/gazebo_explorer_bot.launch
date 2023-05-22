@@ -2,7 +2,10 @@
 <launch>
     <param name="robot_description" textfile="$(find ugv)/src/urdf/leo.urdf" />
 
-    <include file="$(find gazebo_ros)/launch/empty_world.launch"/>
+    <include file="$(find gazebo_ros)/launch/empty_world.launch"> 
+    	<!-- arg name="world_name" value="$(find ugv)/src/worlds/my_empty.world"/-->
+
+    </include>
 
     <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"  args="-param robot_description -urdf -model ugv" />
 
@@ -15,3 +18,7 @@
 
 
 </launch>
+
+
+
+
