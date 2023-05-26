@@ -3,7 +3,7 @@
 <link name="chassis">
     <inertial>
         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
-        <mass value="0.0"/>
+        <mass value="1"/>
         <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
     </inertial>
     <visual name="">
@@ -320,7 +320,7 @@
     </material>
   </visual>
   <collision>
-    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <origin xyz="0.0 0.0 0.02" rpy="0.0 0.0 0.0"/>
     <geometry>
       <box size="0.3 0.3 0.01"/>
     </geometry>
