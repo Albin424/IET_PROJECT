@@ -1,0 +1,12 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/niran/IET_PROJECT/devel/lib/python3/dist-packages",
+        "/home/niran/UAV_Drone_ROS/iris_cam/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/niran/IET_PROJECT/devel/lib/python3/dist-packages",
+        "/home/niran/UAV_Drone_ROS/iris_cam/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ]
+}

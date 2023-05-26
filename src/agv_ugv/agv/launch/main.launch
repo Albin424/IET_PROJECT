@@ -1,12 +1,17 @@
 <launch>
+
 	
 	<!-- Include the MAVROS node with SITL and Gazebo -->
 	<include file="$(find px4)/launch/mavros_posix_sitl.launch">
 		<arg name="world" value="$(find agv)/worlds/my_empty.world"/>
+        <arg name="sdf" default="$(find mavlink_sitl_gazebo)/models/iris_downward_depth_camera/iris_downward_depth_camera.sdf"/>
+		
 	
 	</include>
+	<!-- Node to subscribe to image_raw topic and call image_callback() function -->
+	<!-- <node name="image_subscriber" pkg="offb" type="image_subscriber.py" output="screen"/> -->
 
 	<!-- Our node to control the drone -->
-	<node pkg="agv" type="agv_node" name="agv_node" required="true" output="screen" />
+	<node pkg="offb" type="offb_node" name="offb_node" required="true" output="screen" />
 
 </launch>
