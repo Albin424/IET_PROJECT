@@ -352,7 +352,7 @@
   <visual name="">
     <origin xyz="0.0 0.0 0.0" rpy="0.0 1.57 1.57"/>
     <geometry>
-         <mesh filename="package://ugv/src/meshes/Marker4.dae" scale="0.6 0.6 0.6"/>
+         <mesh filename="package://ugv/src/meshes/Marker1.dae" scale="0.6 0.6 0.6"/>
     </geometry>
 
   </visual>
